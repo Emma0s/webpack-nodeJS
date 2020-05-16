@@ -36,7 +36,19 @@ module.exports = {
                         limit: 200*1024,
                     }
                 }
+            },
+            {
+                test: /\.less$/i, use: ['style-loader','css-loader','less-loader'],
+            },
+            {
+                test: /\.(js|jsx)$/i, use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             }
         ]
-    }
+    },
+    devtool: 'source-map'
 };
