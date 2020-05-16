@@ -10,7 +10,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.7.6",
     "css-loader": "^3.5.3",
-    "style-loader": "^1.2.1"
-  }
+    "file-loader": "^6.0.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0"
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 1%"
+  ]
 }
