@@ -229,3 +229,40 @@ webpack.config.js：
         expect(sum(1, 2)).toBe(3);
       });
       ```
+## 完整配置    
+  ### 安装模块
+  - webpack类
+    - webpack webpack-cli webpack-dev-server
+  - 样式类
+    - css-loader style-loader
+    - postcss-loader autoprefixer
+    - less-loader less
+  - 文件类
+    - file-loader url-loader
+  - ES6编译
+    - babel-loader @babel/core @babel/preset-env
+  - HTML生成
+    - html-webpack-plugin
+  - 代码质量
+    - eslint eslint-loader
+    - stylelint stylelint-webpack-plugin stylelint-config-standard
+  - 测试
+    - jest jest-webpack
+  ### 目录结构
+  ```
+  config/
+    webpack.production.js       #生产配置--build
+    webpack.development.js      #开发配置--start
+    webpack.test.js             #测试配置--test
+  
+  src/                          #源码
+    js/
+    less/
+    css/
+    imgs/
+    index.js                    #主文件
+    
+  tests/                        #测试用例
+  webpack.config.js             #通用配置
+  eslintrc.js                   #代码风格配置(eslint)
+  ```
