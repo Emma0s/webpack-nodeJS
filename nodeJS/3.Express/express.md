@@ -141,7 +141,30 @@ delete req.session
     + "-"表示插入代码
     + jade.renderFile('模板文件名', 参数) 
 2. ejs-温和、非侵入式、弱依赖
+    + "="表示转义输出，"-"非转义输出
 
+## multer
+- body-parser
+  + 解析post数据
+  + application/x-www-form-urlencoded
+  + server.use(bodyParse.urlencoded());
+
+- multer
+  + 解析post文件
+  + multipart/form-data
+  ```
+  let obj = multer({dest:'upload/'});
+  server.use(obj.any());
+  //server.use(obj.single());
+  server.use((req,res)=>{
+    req.files[0].originalname;
+  })
+
+  //加扩展名：
+  let newName = file.path+pathLib.parse(file.originalname).ext;
+
+  fs.rename(oldname,newname,(err)=>{});
+  ```
 
 
 

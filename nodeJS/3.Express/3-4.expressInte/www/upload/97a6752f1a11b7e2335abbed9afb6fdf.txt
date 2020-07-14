@@ -1,0 +1,2 @@
+ctrl + shift +l 选中并修改多行相同的关键字
+shift + delete  删除该行
