@@ -100,13 +100,15 @@ node.js早于ES6，未采用ES6的模块系统
 一个文件就是一个模块
 ```aidl
 //模块声明
-  exports.xx=xxx;
-  exports.xx=xxx;
+  exports.xx=??;
+  exports.xx=??;
 
   module.exports=模块;
 
   module.exports={
-    ...
+    xxx:	??,
+	  xxx:	??,
+	  xxx:	??
   };
   module.exports=function (){};
   module.exports=class {};
