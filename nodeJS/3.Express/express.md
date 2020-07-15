@@ -166,12 +166,36 @@ delete req.session
   fs.rename(oldname,newname,(err)=>{});
   ```
 
+## consolidate
+```
+server.set('view engine','html');
+server.set('views','模板文件目录');
+server.engine('html',consolidate.ejs);
 
+server.get('/',(req,res)=>{
+  res.render('模板文件',数据);
+});
+```
 
+## router
+根据不同的路径，对应到不同的模块
 
+```
+xxxx.com/aaa/     mod1
+xxxx.com/news/    mod_news
+    post              news_post
+    list              news_list
+    content           news_content
+xxxx.com/user/    mod_users
 
-
-
+1.创建router
+let router = express.Router();
+2.把router添加到server
+server.use('/user',router);
+3.router内部
+router.get('/1.html');
+router.post('/2.html');
+```
 
 
 
